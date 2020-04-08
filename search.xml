@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[javajava_design_pa]]></title>
-    <url>%2F2020%2F01%2F02%2Fjavajava-design-pa%2F</url>
+    <title><![CDATA[new_fit]]></title>
+    <url>%2F2020%2F04%2F08%2Fnew-fit%2F</url>
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2020%2F01%2F02%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[JAVA 的23种设计模式和7大设计原则(一)]]></title>
+    <url>%2F2020%2F04%2F08%2Fdescry%2F</url>
+    <content type="text"><![CDATA[设计模式（Design pattern）代表了最佳的实践，通常被有经验的面向对象的软件开发人员所采用。设计模式是软件开发过程中面临的一般问题的解决方案。设计模式是一套被反复使用的、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。 设计模式经典面试题1原型设计模式的深拷贝和浅拷贝是什么，并写出深拷贝的两种方式的源码，(使用clone方法和序列化来实现)。 2设计模式的七大原则有哪些 在实际项目中哪些用导ocp原则。 3某商城的订单状态有多种，随着操作不同，改变订单状态，请使用状态模式进行设计，完成实际代码。 4单例模式的几种实现方式，各个方式的优缺点。设计模式的七大原则 单一职责原则 降低类复杂度 一个类只负责一项职责提高可读性 可维护性 接口隔离原则 客户端不应该依赖他不需要的接口，即一个类对另外一个类的依赖应该建立在最小接口上。详情：项目包名(second) 依赖倒转原则 高模块不应该依赖底层模块，二者应该依赖其抽象。 抽象不应该依赖细节，细节应该依赖抽象。 依赖倒转原则是相对有细节的多变性，抽象的东西要稳定的多，以抽象为基础的搭建架构比以细节为基础搭建架构稳定的多，java 中抽象指接口或者抽象类，细节则是实现。 使用接口是为了定制规范，展现细节交给子类去完成。 *** 依赖关系的 传递的三种方式 接口传递，构造方法传递，setter 方法传递详情：项目包名(third) 里氏替换原则 所谓里氏替换原则就是正确的使用继承关系，父类凡事已经实现好的方法，实际上已经设定规范和契约，虽然不强制子类必须遵循子类也遵循这些规则，但是如果子类对这些已经实现了的方法任意修改，就会对整体进行破坏。 解决的思路是 原来的父类和子类都继承一个更加通俗的基类，原有的继承关系去掉，采用依赖 聚合 组合的代替关系。详情：项目包名(four) 开闭原则ocp 开闭原则是最重要的原则，即当开发过程中，对一个软件的实体，模块和函数应该对扩展开放，对修改关闭，所谓对扩展开放，在原来的基础上，用抽象来扩展方法，用实现来增添细节，而不是在原有的基础去进行修改。 迪米特法则 合成复用原则 项目地址跳转Gitee]]></content>
   </entry>
   <entry>
     <title><![CDATA[这是我的一篇文章]]></title>
-    <url>%2F2020%2F01%2F02%2Farticle-title%2F</url>
+    <url>%2F2020%2F04%2F08%2Farticle-title%2F</url>
     <content type="text"><![CDATA[##]]></content>
   </entry>
   <entry>
-    <title><![CDATA[spring cloud 微服务开发]]></title>
-    <url>%2F2019%2F10%2F28%2Ffirst-one%2F</url>
-    <content type="text"></content>
+    <title><![CDATA[JAVA 的23种设计模式和7大设计原则(二)]]></title>
+    <url>%2F2020%2F03%2F11%2Fmodel%2F</url>
+    <content type="text"><![CDATA[装饰者模式场景：某咖啡店的咖啡种类为Espresso,ShortBlack,Longblack三种咖啡。 调料：milk，Soy，chocolate 需求：在扩展新咖啡的种类和调料的同时来计算咖啡的费用,(顾客可以单点咖啡，也可以咖啡+调料(份数不限)。 传统解决思维：上图(我们是把调料放到咖啡里计算总价) 问题：这种情况最终导致当扩展咖啡种类和调料的时候要频繁创建对象，最终引发类爆炸，频繁创建单体对象的问题。装饰者模式定义动态的将新功能附加到对象上，在对象功能扩展方面，比继承更有弹性。 角色：装饰者(调料)，被装饰者(咖啡)，主体(基类)。 上图(在装饰者模式我们用嵌套方式，把咖啡加到调料里，如果需要其他调料，就把事先加好的咖啡和调料在放到调料里计算总价)。 详解：Drink 同传统方法一样，里面有商品信息描述和计算价格的方法，抽象类。 shortBlack：单品咖啡。 Decorator：装饰类，含有一个被装饰的对象(Drink)。 Decorator的cost方法进行费用叠加计算。源码分析JDK应用装饰者模式：Java的IO结构，InputStream 相当于Drink, InputStream 有相当多的子类比如StringBufferInputStream， 它相当于单体咖啡；FilterInputStream 就是相当于Decorator， 在它下面是DataInputStream，也就是调料。 public class FilterInputStream extends InputStream { /** * The input stream to be filtered. */ protected volatile InputStream in; ========================= 策略模式引出：我们应该非常熟悉继承extends的作用，简单来讲当一个子类继承父类 的时候，子类便可获取父类的属性(public)和方法(public),但是有时候子类 需要的父类方法并不能满足，这样虽可以使用重写来实现，但是也会导致一问题生。 场景：在动物里有小兔子，小狗，小猪等，他们有统一的动作(方法),也有自己特有的动作(方法)。 需求：有小兔子，小狗，小猪三种动物，它们具有不同的行为，和信息 传统解决思维：上图(定义一个超类，里面有eat,sleep方法，在让子类继承) 问题：这种情况虽然可以解决上述问题，但是在eat方法中各个动物吃的东西是不一样的。这就必须要重写eat方法，如果有很多个方法，那么就要一直重写下去。策略模式定义定义算法族，分别封装起来，让他们之间可以互相和替换，此模式让算法 的变化独立于使用算法的客户。 角色：策略接口，策略接口实现类，超类。超类子类。 详解：Ieat 这是一个策略接口，不同业务根据实际定义多个策略接口，比如sleep也可以扩展成策略接口。 context：超类(重点)通过给超类添加策略接口作为属性。 子类：继承超类。 策略接口实现类源码分析JDK应用策略模式：java Arrays通过使用Comparator实现这个接口来完成排序方法 public static void main(String[] args) { Integer[] att = {9, 4, 2, 1, 55, 7}; // 匿名内部类实现了Comparator接口(策略接口)。 //public int compare(Integer o1, Integer o2) {....} 具体的实现方式 Comparator comparator = new Comparator() { @Override public int compare(Integer o1, Integer o2) { if (o1 > o2) { return 1; } else { return -1; } } }; Arrays.sort(att,comparator); System.out.println(Arrays.toString(att)); } 相关代码跳转Gitee]]></content>
   </entry>
 </search>
